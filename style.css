@@ -1,0 +1,96 @@
+/* CSS Reset */
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+/* Game */
+.game{
+    width:100vw;
+    height:100vh;
+    background: url('bg.png') no-repeat;
+    background-size: 100vw 100vh;
+}
+
+/* Dragon */
+.dino{
+    height: 99px;
+    width: 190px;
+    background: url('dino.png') center center/cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 2px;
+    left:18vw;
+    transform: scaleX(1);
+}
+
+.obstacle{
+    height: 99px;
+    width: 190px;
+    background: url('dragon.png') center center/cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 2px;
+    left:79vw;
+    animation: dragonMove 6s linear; 
+    animation-iteration-count: infinite; 
+}
+
+#score{
+    font-family: 'Ubuntu', sans-serif;
+        position: absolute;
+        font-size: 21px;
+        font-weight: bolder;
+        border: solid black 4px;
+        border-radius: 8px;
+        padding: 8px;
+        right: 5vw;
+        top: 42px;
+}
+.state {
+    font-family: 'Ubuntu', sans-serif; 
+    width: 25vw;
+    margin: 20px auto;
+    padding: 3px 4px;
+    text-align: center;
+}
+.reset {
+    visibility: hidden;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    height: 23px;
+    text-align: center;
+    width: 82px;
+    border: solid black 2px;
+    border-radius: 15px;
+    padding: 9px;
+    font-size: 19px;
+    position: relative;
+    top: 130px;
+    left: 55px;
+    background: #b3cdd4;
+}
+.reset:hover{
+    background: #b3cdd471;
+}
+.dinoanimate{
+    animation: dinoMove 1s ease-out;
+  }
+/* Animation */
+
+@keyframes dinoMove{
+    0%{
+        bottom:2px;
+    }
+    100%{
+        bottom:450px;
+    }
+}
+@keyframes dragonMove{
+    0%{
+        left:100vw;
+    }
+    100%{
+        left:-30vw;
+    }
+}
